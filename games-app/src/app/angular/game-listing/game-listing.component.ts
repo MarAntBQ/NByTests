@@ -21,4 +21,15 @@ export class GameListingComponent implements OnInit {
       this.games = games;
     });
   }
+
+  deleteGame(gameId: number): void {
+    this.gameService.deleteGame(gameId).subscribe(() => {
+      console.log(`Game with id ${gameId} deleted`);
+      this.games = this.games.filter(game => game.id !== gameId);
+    });
+  }
+
+  trackByGameId(index: number, game: Game): number {
+    return game.id;
+  }
 }

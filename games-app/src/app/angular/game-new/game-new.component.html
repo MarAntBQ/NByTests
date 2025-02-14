@@ -1,14 +1,14 @@
-<form>
+<form (ngSubmit)="onSubmit()">
   <div class="field">
     <label for="name">Nombre</label>
-    <input id="name" type="text" />
+    <input id="name" type="text" [(ngModel)]="game.name" name="name" />
   </div>
   <div class="field">
-    <label for="name">Descripción</label>
-    <textarea id="name" type="text"></textarea>
+    <label for="description">Descripción</label>
+    <textarea id="description" [(ngModel)]="game.description" name="description"></textarea>
   </div>
   <div class="actions">
     <button type="submit" class="btn-primary">Crear</button>
-    <a href="/angular/senior/games" class="btn-secondary">Cancelar</a>
+    <a [routerLink]="['/']" class="btn-secondary">Cancelar</a>
   </div>
 </form>

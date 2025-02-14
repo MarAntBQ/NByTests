@@ -1,18 +1,18 @@
-<form>
+<form (ngSubmit)="onSubmit()">
   <div class="field">
     <label for="id">Id</label>
-    <input id="id" type="text" disabled [value]="game?.id" />
+    <input id="id" type="text" disabled [value]="game.id" />
   </div>
   <div class="field">
     <label for="name">Nombre</label>
-    <input id="name" type="text" [value]="game?.name"/>
+    <input id="name" type="text" [(ngModel)]="game.name" name="name" />
   </div>
   <div class="field">
-    <label for="name">Descripción</label>
-    <textarea id="name" type="text">{{game?.description}}</textarea>
+    <label for="description">Descripción</label>
+    <textarea id="description" [(ngModel)]="game.description" name="description"></textarea>
   </div>
   <div class="actions">
     <button type="submit" class="btn-primary">Actualizar</button>
-    <a href="/" class="btn-secondary">Cancelar</a>
+    <a [routerLink]="['/']" class="btn-secondary">Cancelar</a>
   </div>
 </form>
