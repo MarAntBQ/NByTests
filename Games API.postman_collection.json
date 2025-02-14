@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "db030b32-0d54-4fe7-8bdc-6fda47c39aeb",
+		"name": "Games API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38128171"
+	},
+	"item": [
+		{
+			"name": "All Games",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/games",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Game By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/games/1",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"games",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Age of Empires II\",\r\n    \"description\": \"Age of Empires II: Definitive Edition is a 2019 real-time strategy video game developed by World's Edge and Forgotten Empires and published by Xbox Game Studios. It is a remaster of the 1999 game Age of Empires II: The Age of Kings, celebrating the 20th anniversary of the original.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SERVER}}/api/games/",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"games",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Game By ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Age of Empires II\",\r\n    \"description\": \"Age of Empires II: Definitive Edition is a 2024 real-time strategy video game developed by World's Edge and Forgotten Empires and published by Xbox Game Studios. It is a remaster of the 1999 game Age of Empires II: The Age of Kings, celebrating the 20th anniversary of the original.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SERVER}}/api/games/1",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"games",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "SERVER",
+			"value": "localhost:3002",
+			"type": "default"
+		}
+	]
+}
