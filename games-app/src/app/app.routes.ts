@@ -13,7 +13,7 @@ export const routes: Routes = [
     component: GameNewComponent
   },
   {
-    path: 'detail',
+    path: 'edit/:id',
     component: GameDetailComponent
   }
 ];

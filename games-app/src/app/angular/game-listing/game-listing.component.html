@@ -1,9 +1,10 @@
 <div class="actions">
   <a href="/angular/senior/games/new" class="btn-new">Nuevo</a>
 </div>
-<div *ngIf="games">
+<div>
   <ul role="list" class="list">
-    <li *ngFor="let game of games" class="item">
+    @for (game of games; track game.id) {
+    <li class="item">
       <div class="row">
         <div class="row-group">
           <p class="row-content">{{game.name}}</p>
@@ -12,11 +13,11 @@
           <button class="btn-delete">Eliminar</button>
         </div>
         <div class="row-action">
-          <a href="/angular/senior/games/{{game.id}}" class="btn-edit"
-            >Editar</a
-          >
+          <a [routerLink]="['/edit', game.id]" class="btn-edit"
+            >Editar</a>
         </div>
       </div>
     </li>
+    }
   </ul>
 </div>
