@@ -1,15 +1,15 @@
 <form>
   <div class="field">
     <label for="id">Id</label>
-    <input id="id" type="text" disabled />
+    <input id="id" type="text" disabled [value]="game?.id" />
   </div>
   <div class="field">
     <label for="name">Nombre</label>
-    <input id="name" type="text" />
+    <input id="name" type="text" [value]="game?.name"/>
   </div>
   <div class="field">
     <label for="name">Descripción</label>
-    <textarea id="name" type="text"></textarea>
+    <textarea id="name" type="text">{{game?.description}}</textarea>
   </div>
   <div class="actions">
     <button type="submit" class="btn-primary">Actualizar</button>

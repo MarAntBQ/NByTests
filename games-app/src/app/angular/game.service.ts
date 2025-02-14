@@ -17,7 +17,8 @@ export class GameService {
   }
 
   getGameById(gameId: string) {
-    throw new Error("Not implemented yet");
+    const url = `${this.gamesUrl}/${gameId}`;
+    return this.http.get<Game>(url);
   }
 
   createGame(game: Game) {
