@@ -11,7 +11,7 @@ Esta API permite gestionar una lista de juegos. Proporciona endpoints para ver t
 - **Descripción:** Obtiene una lista de todos los juegos.
 - **Ejemplo de solicitud:**
   ```sh
-  curl -X GET "http://localhost:3002/api/games"
+  curl --location '{{API-URL}}/api/games'
   ```
 
 ### Obtener un juego por ID
@@ -20,7 +20,7 @@ Esta API permite gestionar una lista de juegos. Proporciona endpoints para ver t
 - **Descripción:** Obtiene una lista de todos los juegos.
 - **Ejemplo de solicitud:**
   ```sh
-  curl -X GET "http://localhost:3002/api/games/1"
+  curl --location '{{API-URL}}/api/games/1'
   ```
 
 ### Crear un nuevo juego
@@ -36,9 +36,10 @@ Esta API permite gestionar una lista de juegos. Proporciona endpoints para ver t
   ```
 - **Ejemplo de solicitud:**
   ```sh
-  curl -X POST "http://localhost:3002/api/games" -H "Content-Type: application/json" -d '{
-  "name": "Quake 3 Arena",
-  "description": "Quake III Arena is a 1999 multiplayer-focused first-person shooter developed by id Software. The third installment of the Quake series, Arena differs from previous games by excluding a story-based single-player mode and focusing primarily on multiplayer gameplay. The single-player mode is played against computer-controlled bots. It features music composed by Sonic Mayhem and Front Line Assembly founder Bill Leeb."
+  curl --location '{{API-URL}}/api/games/' \
+  --data '{
+      "name": "Quake 3 Arena",
+      "description": "Quake III Arena is a 1999 multiplayer-focused first-person shooter developed by id   Software. The third installment of the Quake series, Arena differs from previous games by  excluding a story-based single-player mode and focusing primarily on multiplayer gameplay. The    single-player mode is played against computer-controlled bots. It features music composed by Sonic   Mayhem and Front Line Assembly founder Bill Leeb."
   }'
   ```
 
@@ -56,9 +57,11 @@ Esta API permite gestionar una lista de juegos. Proporciona endpoints para ver t
   ```
 - **Ejemplo de solicitud:**
   ```sh
-  curl -X PUT "http://localhost:3002/api/games/2" -H "Content-Type: application/json" -d '{
-  "name": "Quake III Arena",
-  "description": "Quake III Arena is a 1999 multiplayer-focused first-person shooter developed by id Software. The third installment of the Quake series, Arena differs from previous games by excluding a story-based single-player mode and focusing primarily on multiplayer gameplay. The single-player mode is played against computer-controlled bots. It features music composed by Sonic Mayhem and Front Line Assembly founder Bill Leeb."
+  curl --location --request PUT '{{API-URL}}/api/games/2' \
+  --header 'Content-Type: application/json' \
+  --data '{
+      "name": "Quake III Arena",
+      "description": "Quake III Arena is a 1999 multiplayer-focused first-person shooter developed by id  Software. The third installment of the Quake series, Arena differs from previous games by  excluding a story-based single-player mode and focusing primarily on multiplayer gameplay. The   single-player mode is played against computer-controlled bots. It features music composed by Sonic  Mayhem and Front Line Assembly founder Bill Leeb."
   }'
   ```
 
@@ -68,5 +71,5 @@ Esta API permite gestionar una lista de juegos. Proporciona endpoints para ver t
 - **Descripción:** Elimina un juego por ID
 - **Ejemplo de solicitud:**
   ```sh
-  curl -X DELETE "http://localhost:3002/api/games/1"
+  curl --location --request DELETE '{{API-URL}}/api/games/2'
   ```
