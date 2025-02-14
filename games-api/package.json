@@ -1,7 +1,7 @@
 {
-  "name": "marbustaccounts",
+  "name": "marantbq-games-api",
   "version": "2.0.0",
-  "description": "Marbust Accounts V2 with Node",
+  "description": "Marco Antonio Bustillos - Games API",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,21 +9,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MarAntBQ/MarbustAccounts.git"
+    "url": "git+https://github.com/MarAntBQ/NByTests.git"
   },
   "keywords": [
-    "marbust",
-    "technology",
-    "company",
-    "accounts",
-    "system"
+    "Games",
+    "API",
+    "NodeJS",
+    "Express",
+    "MySQL",
+    "Sequelize",
+    "MarAntBQ"
   ],
-  "author": "Marco Antonio Bustillos (Marbust Technology Company)",
+  "author": "Marco Antonio Bustillos (MarAntBQ.dev)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MarAntBQ/MarbustAccounts/issues"
+    "url": "https://github.com/MarAntBQ/NByTests/issues"
   },
-  "homepage": "https://github.com/MarAntBQ/MarbustAccounts#readme",
+  "homepage": "https://github.com/MarAntBQ/NByTests#readme",
   "dependencies": {
     "axios": "^1.7.4",
     "bcryptjs": "^2.4.3",
