@@ -50,7 +50,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Age of Empires II\",\r\n    \"description\": \"Age of Empires II: Definitive Edition is a 2019 real-time strategy video game developed by World's Edge and Forgotten Empires and published by Xbox Game Studios. It is a remaster of the 1999 game Age of Empires II: The Age of Kings, celebrating the 20th anniversary of the original.\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Quake 3 Arena\",\r\n    \"description\": \"Quake III Arena is a 1999 multiplayer-focused first-person shooter developed by id Software. The third installment of the Quake series, Arena differs from previous games by excluding a story-based single-player mode and focusing primarily on multiplayer gameplay. The single-player mode is played against computer-controlled bots. It features music composed by Sonic Mayhem and Front Line Assembly founder Bill Leeb.\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -78,7 +78,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Age of Empires II\",\r\n    \"description\": \"Age of Empires II: Definitive Edition is a 2024 real-time strategy video game developed by World's Edge and Forgotten Empires and published by Xbox Game Studios. It is a remaster of the 1999 game Age of Empires II: The Age of Kings, celebrating the 20th anniversary of the original.\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Quake III Arena\",\r\n    \"description\": \"Quake III Arena is a 1999 multiplayer-focused first-person shooter developed by id Software. The third installment of the Quake series, Arena differs from previous games by excluding a story-based single-player mode and focusing primarily on multiplayer gameplay. The single-player mode is played against computer-controlled bots. It features music composed by Sonic Mayhem and Front Line Assembly founder Bill Leeb.\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -86,14 +86,33 @@
 					}
 				},
 				"url": {
-					"raw": "{{SERVER}}/api/games/1",
+					"raw": "{{SERVER}}/api/games/2",
 					"host": [
 						"{{SERVER}}"
 					],
 					"path": [
 						"api",
 						"games",
-						"1"
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Game by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/games/2",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"games",
+						"2"
 					]
 				}
 			},
